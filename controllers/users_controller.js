@@ -114,7 +114,18 @@ module.exports.create = function (req, res) {
         }
 
         if (!user) {
-            User.create(req.body, function (err, user) {
+            
+
+            var company = true;
+            if(req.body.com_user=='User') company = false;
+            else if (req.body.com_user=='Company') company = true;
+
+            User.create({
+                email: req.body.email,
+                password: req.body.password,
+                name: req.body.name,
+                is_comp:company
+            }, function (err, user) {
 
                 if (err) {
                     console.log("there was an error in creating user in the database");
@@ -133,8 +144,9 @@ module.exports.create = function (req, res) {
 
 module.exports.createSession = function (req, res) {
     req.flash('success', 'Logged in successfully');
-
-    return res.redirect('/');
+    if(req.user.is_comp)
+        return res.redirect('/company/home');
+    else return res.redirect('/');
 };
 
 module.exports.destroySession = function (req, res) {

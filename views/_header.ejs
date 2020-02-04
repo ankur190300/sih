@@ -62,6 +62,9 @@ hr{
             <a class="nav-link" href="/users/sign-up">Sign Up</a>
           </li>
          <% } else { %>
+          <li class ="nav-item">
+          <% if (user.is_comp){ %> <a class="nav-link" href="job/create">add a job</a> <% } %>
+          </li>
          <li class="nav-item">
             <a class="nav-link" href="#">Signed in as <%= user.name %></a>
           </li>

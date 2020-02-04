@@ -16,7 +16,8 @@ module.exports.create_job = async function(req, res){
 
             description: req.body.description,
             company: req.user._id,
-            job_name: req.body.job_name
+            job_name: req.body.job_name, 
+            salary: req.body.salary
 
          })
 

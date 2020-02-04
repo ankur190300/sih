@@ -13,4 +13,6 @@ router.use('/comments', require('./comments.js'));
 router.use('/likes', require('./likes.js'));
 // added the job route
 router.use('/job', require('./jobs.js'));
+router.use('/company', require('./company'));
+
 module.exports = router;
