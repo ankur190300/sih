@@ -1,0 +1,14 @@
+<% for (job of comp_jobs ){ %>
+<br>
+<b>Job Name</b>
+<%= job.job_name %>
+<br> 
+<b>Job description</b>
+<%= job.description %>
+<br>
+<b><a href ="/job/delete/<%= job.id %>">delete </a> </b>
+<br>
+<br>
+<% } %>
+
+<a href="/job/create"> Add more jobs </a>

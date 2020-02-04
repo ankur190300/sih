@@ -31,3 +31,23 @@ module.exports.create_job = async function(req, res){
     }
 
 }
+
+module.exports.delete = async function(req ,res){
+
+    try{
+
+        let job = await Job.findById(req.params.id);
+        job.remove();
+        req.flash('success', 'Comment deleted!')
+        res.redirect('back');
+
+
+    }catch(err){
+        req.flash('error', err);
+        
+        return res.redirect('back');
+    }
+    
+    
+
+}

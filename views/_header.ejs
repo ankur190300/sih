@@ -44,7 +44,16 @@ hr{
 
     
 <nav class="navbar navbar-expand-md navbar-light bg-light" style="border-bottom: 3px solid grey;">
-      <a class="navbar-brand" href="/">HOME</a>
+
+
+  <% if(locals.user){ %>
+      <% if (user.is_comp){ %><a class="navbar-brand" href="/company/home">HOME</a> <% } %>
+      <% if (!user.is_comp){ %><a class="navbar-brand" href="/">HOME</a> <% } %>
+
+  <% } else {%> 
+    <a class="navbar-brand" href="/">HOME</a>
+  <% } %>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -63,7 +72,7 @@ hr{
           </li>
          <% } else { %>
           <li class ="nav-item">
-          <% if (user.is_comp){ %> <a class="nav-link" href="job/create">add a job</a> <% } %>
+          <% if (user.is_comp){ %> <a class="nav-link" href="/company/jobs">View jobs</a> <% } %>
           </li>
          <li class="nav-item">
             <a class="nav-link" href="#">Signed in as <%= user.name %></a>

@@ -1,1 +1,15 @@
 <h1>Company Home</h1>
+<br>
+<br>
+<% for ( job of all_jobs){ %>
+<br>
+<b>Job Name</b>
+
+<%= job.job_name %>
+<br> 
+<b>Job description</b>
+<%= job.description %>
+<br >
+<br>
+    
+<% } %>
