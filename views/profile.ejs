@@ -1,0 +1,43 @@
+﻿ <div id='my-div'>
+
+<link rel="stylesheet" href="<%= assetPath('css/user_profile.css') %>">
+
+<h1 class='display-4'>PROFILE</h1>
+
+<img class="mx-auto" src="<%= user.avatar%>" alt="<%=user.name%>" width='100px'>
+ <br>
+<br>
+<% if (profile_user.id == user.id){ %>
+  
+  <form action = "/users/update/<%= user.id %>"  enctype= "multipart/form-data" method = "POST" >
+   <div class="form-group">
+    <label>Name</label>
+    <input type = "text"  class="form-control" name= "name"  placeholder= "Name" value = 
+    "<%= profile_user.name%>" required>
+   </div>
+   
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control"  placeholder="Email" name="email" value = "<%= profile_user.email%> " required>
+  </div>
+
+  <div class="form-group">
+    <label>File/Image</label>
+    <br>
+    <input type ="file" name ="avatar" placeholder ="Profile Picture">
+  </div>
+
+
+   <button id='submit-btn' >Update</button>
+  
+  </form>
+  
+  
+  <% } else { %>
+    
+        <p><%= profile_user.name  %> </p>
+    <p> <%= profile_user.email%></p>
+    
+    <% } %> 
+    </div>

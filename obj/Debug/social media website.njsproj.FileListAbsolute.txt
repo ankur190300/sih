@@ -1,0 +1,3 @@
+D:\Visual Studio\social media website\obj\Debug\social media website.njsprojAssemblyReference.cache
+D:\Visual Studio\social media website\obj\Debug\social media website.njsproj.CoreCompileInputs.cache
+D:\Visual Studio\social media website\bin\Microsoft.NodejsTools.WebRole.dll

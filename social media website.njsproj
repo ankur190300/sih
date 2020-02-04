@@ -1,0 +1,192 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>social media website</Name>
+    <RootNamespace>social media website</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2742f6af-fec0-4aa5-b62e-2bfab5b683b9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>index.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="assets\css\layout.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="assets\css\user_profile.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="assets\js\chat_engine.js" />
+    <Content Include="assets\js\home_posts.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="assets\js\home_post_comments.js" />
+    <Content Include="assets\js\toggle_likes.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="assets\scss\chat_box.scss" />
+    <Content Include="assets\scss\home.scss" />
+    <Content Include="assets\scss\layout.scss" />
+    <Content Include="assets\scss\user_profile.scss" />
+    <Content Include="config\chat_sockets.js" />
+    <Content Include="config\environment.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="config\kue.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="config\middleware.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="config\nodemailer.js" />
+    <Content Include="config\passport-jwt-strategy.js" />
+    <Content Include="config\passport-local-strategy.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="config\mongoose.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="config\view-helper.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controllers\api\v1\posts_api.js" />
+    <Content Include="controllers\api\v1\users_api.js" />
+    <Content Include="controllers\home_controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controllers\comments_controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controllers\likes_controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controllers\posts_controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controllers\users_controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="gulpfile.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="index.js" />
+    <Content Include="mailers\comments_mailers.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="models\comment.js" />
+    <Content Include="models\jobs.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="models\like.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="models\posts.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="models\JavaScript1.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="public\assets\css\chat_box-3aa9f1fb21.css" />
+    <Content Include="public\assets\css\home-de60b40ae2.css" />
+    <Content Include="public\assets\css\layout-ea5902e640.css" />
+    <Content Include="public\assets\css\user_profile-29c6bc0665.css" />
+    <Content Include="public\assets\js\chat_engine-21be63d13f.js" />
+    <Content Include="public\assets\js\home_posts-5d2287dba4.js" />
+    <Content Include="public\assets\js\home_post_comments-17d4d4c772.js" />
+    <Content Include="public\assets\js\toggle_likes-0e3d81481c.js" />
+    <Content Include="public\assets\rev-manifest.json" />
+    <Content Include="public\rev-manifest.json" />
+    <Content Include="README.md" />
+    <Content Include="routes\comments.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\index.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\likes.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\posts.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\users.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\home.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\layout.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\mailers\comments\new_comment.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\user_sign_in.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\user_sign_up.ejs" />
+    <Content Include="views\_chat_box.ejs" />
+    <Content Include="views\_comments.ejs" />
+    <Content Include="views\_header.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\_footer.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\profile.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\_post.ejs" />
+    <Content Include="workers\comment_email_workers.js">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\" />
+    <Folder Include="assets\css\" />
+    <Folder Include="assets\images\" />
+    <Folder Include="assets\js\" />
+    <Folder Include="assets\scss\" />
+    <Folder Include="config\" />
+    <Folder Include="controllers\" />
+    <Folder Include="controllers\api\" />
+    <Folder Include="controllers\api\v1\" />
+    <Folder Include="models\" />
+    <Folder Include="mailers\" />
+    <Folder Include="public\" />
+    <Folder Include="public\assets\" />
+    <Folder Include="public\assets\css\" />
+    <Folder Include="public\assets\js\" />
+    <Folder Include="public\assets\images\" />
+    <Folder Include="workers\" />
+    <Folder Include="uploads\" />
+    <Folder Include="routes\" />
+    <Folder Include="uploads\users\" />
+    <Folder Include="uploads\users\avatars\" />
+    <Folder Include="views\" />
+    <Folder Include="views\mailers\" />
+    <Folder Include="views\mailers\comments\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+</Project>
