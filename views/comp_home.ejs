@@ -1,15 +1,24 @@
-<h1>Company Home</h1>
+<div class = "container">
+<h1 align = "center" >Company Home </h1>
 <br>
 <br>
 <% for ( job of all_jobs){ %>
-<br>
-<b>Job Name</b>
+    <div class="container z-depth-5 card-panel" align="center">
+    <b>Job Name</b>
 
-<%= job.job_name %>
-<br> 
-<b>Job description</b>
-<%= job.description %>
-<br >
-<br>
+    <%= job.job_name %>
+    <br /> 
+    <br />
+    <b>Job description</b>
+    <%= job.description %>
+    <!--<br />
+    <br />
+    <b>Email</b>
+    <%= locals.user %>
+    <br /> -->
+    </div>
+    <br />
     
 <% } %>
+
+</div>
