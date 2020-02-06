@@ -102,6 +102,7 @@ module.exports.signup = function (req, res) {
 };
 //set up the user id create page 
 module.exports.create = function (req, res) {
+    console.log(req.body);
     if (req.body.password != req.body.confirm_password) {
         console.log("the password and confirm password are not matching");
         return res.redirect("back");
@@ -114,6 +115,7 @@ module.exports.create = function (req, res) {
         }
 
         if (!user) {
+
             
 
             var company = true;
@@ -124,7 +126,8 @@ module.exports.create = function (req, res) {
                 email: req.body.email,
                 password: req.body.password,
                 name: req.body.name,
-                is_comp:company
+                is_comp:company, 
+                work_field:req.body.interest,
             }, function (err, user) {
 
                 if (err) {

@@ -1,24 +1,69 @@
-<div class = "container">
-<h1 align = "center" >Company Home </h1>
-<br>
-<br>
-<% for ( job of all_jobs){ %>
-    <div class="container z-depth-5 card-panel" align="center">
-    <b>Job Name</b>
 
-    <%= job.job_name %>
-    <br /> 
-    <br />
-    <b>Job description</b>
-    <%= job.description %>
-    <!--<br />
-    <br />
-    <b>Email</b>
-    <%= locals.user %>
-    <br /> -->
-    </div>
-    <br />
-    
-<% } %>
+        <main role="main" >
+            <!-- Main jumbotron for a primary marketing message or call to action -->
+            <div class="jumbotron">
+                 <div class="container"> 
+                    <b><div class="abc"><h1 class="display-3">Company Home</h1>
+                    <p>
+                        This company provides part-time software jobs for women.
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button"
+                            >Learn more &raquo;</a
+                        >
+                    </p>
+                </b>
+                </div>
+                </div>
+            </div>
 
-</div>
+            <div class="container">
+                <!-- Example row of columns -->
+                
+                <div class="row">
+                    <% for ( job of all_jobs){ %>
+                    <div class="col-md-4">
+                        
+                        <h2><%= job.job_name %></h2>
+                        <p>
+                            
+                            <%= job.description %>
+                        </p>
+                        <p>Salary: <%= job.salary %></p>
+                        <p>Email: <%= job.company.email %></p>
+                        <p>
+                            <a class="btn btn-primary" href="#" role="button"
+                                >View details &raquo;</a
+                            >
+                        </p>
+                    </div>
+                    <% } %>
+                </div>
+
+                <hr>
+               
+            </div>
+            <!-- /container -->
+        </main>
+        <br><br><br>
+        <footer class="container">
+            <p>&copy; Company 2019-2020</p>
+        </footer>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            window.jQuery ||
+                document.write(
+                    '<script src="https://getbootstrap.com/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>'
+                );
+        </script>
+        <script
+            src="https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+            crossorigin="anonymous"
+        ></script>
+
+      

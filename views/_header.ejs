@@ -2,6 +2,76 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="" />
+        <meta
+            name="author"
+            content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+        />
+        <meta name="generator" content="Jekyll v3.8.6" />
+        <title>Company Home</title>
+
+        <link
+            rel="canonical"
+            href="https://getbootstrap.com/docs/4.4/examples/jumbotron/"
+        />
+
+        <!-- Bootstrap core CSS -->
+        <link
+            href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+        <!-- Favicons -->
+        <link
+            rel="apple-touch-icon"
+            href="https://getbootstrap.com/docs/4.4/assets/img/favicons/apple-touch-icon.png"
+            sizes="180x180"
+        />
+        <link
+            rel="icon"
+            href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-32x32.png"
+            sizes="32x32"
+            type="image/png"
+        />
+        <link
+            rel="icon"
+            href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-16x16.png"
+            sizes="16x16"
+            type="image/png"
+        />
+        <link
+            rel="manifest"
+            href="https://getbootstrap.com/docs/4.4/assets/img/favicons/manifest.json"
+        />
+        <link
+            rel="mask-icon"
+            href="https://getbootstrap.com/docs/4.4/assets/img/favicons/safari-pinned-tab.svg"
+            color="#563d7c"
+        />
+        <link
+            rel="icon"
+            href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon.ico"
+        />
+        <meta
+            name="msapplication-config"
+            content="https://getbootstrap.com/docs/4.4/assets/img/favicons/browserconfig.xml"
+        />
+        <meta name="theme-color" content="#563d7c" />
+
+       
+        <!-- Custom styles for this template -->
+        <link
+            href="https://getbootstrap.com/docs/4.4/examples/jumbotron/jumbotron.css"
+            rel="stylesheet"
+        />
   <title></title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   
@@ -9,10 +79,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Crushed' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Dr Sugiyama' rel='stylesheet'>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <script src="https://kit.fontawesome.com/9818de461d.js" crossorigin="anonymous"></script>
 
 <!-- Compiled and minified CSS -->
@@ -22,8 +92,37 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </head>
-
 <style>
+  .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+  }
+
+  .jumbotron {
+      /* background-image: url("https://images.unsplash.com/photo-1531535701800-03b2bec4fbfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"); */
+      background-image: url("https://image.cnbcfm.com/api/v1/image/104540517-GettyImages-158808459.jpg?v=1576164415&w=678&h=381");
+      -webkit-background-size: 100% 100%;
+      -moz-background-size: 100% 100%;
+      -o-background-size: 100% 100%;
+      background-size: 100% 100%;
+      height: 70vh;
+  }
+  .abc {
+      position: relative;
+      left:150px;
+      top: 50px;
+      
+  }
+  @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+      }
+  }
+
 hr{
   border-bottom: 3px solid grey;
   /*border-top: 3px solid grey;*/
@@ -44,6 +143,12 @@ hr{
     }
     ul {
       list-style-type: none;
+    }
+    nav{
+      top:0;
+    }
+    body{
+      padding-top: 0px;
     }
 </style>
 
@@ -80,6 +185,9 @@ hr{
          <% } else { %>
           <li class ="nav-item">
           <% if (user.is_comp){ %> <a class="nav-link" href="/company/jobs">View jobs</a> <% } %>
+          </li>
+          <li class ="nav-item">
+            <% if (!user.is_comp){ %> <a class="nav-link" href="/company/home">View available jobs</a> <% } %>
           </li>
          <li class="nav-item">
             <a class="nav-link" href="#">Signed in as <%= user.name %></a>

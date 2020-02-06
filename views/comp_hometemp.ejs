@@ -1,0 +1,26 @@
+<div class = "container" >
+<h1 align = "center" >Company Home </h1>
+<br>
+<br>
+<% for ( job of all_jobs){ %>
+    <div  style="display: flex; justify-content: center;">
+    <div class="container z-depth-5 card-panel" align="center" style="width: 800px; ">
+    <b>Job Name</b>
+
+    <%= job.job_name %>
+    <br /> 
+    <br />
+    <b>Job description</b>
+    <%= job.description %>
+    
+    <br />
+    <b>Email</b>
+    <%= job.company.email %>
+    <br /> 
+    </div>
+    </div>
+    <br />
+    
+<% } %>
+
+</div>

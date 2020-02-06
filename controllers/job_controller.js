@@ -51,3 +51,10 @@ module.exports.delete = async function(req ,res){
     
 
 }
+
+module.exports.get_job = function(req, res){
+
+    console.log("hello");
+
+
+}

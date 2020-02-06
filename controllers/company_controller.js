@@ -5,7 +5,7 @@ module.exports.home =  async function(req, res){
 
     try{
         
-        jobs =  await Job.find({});
+        jobs =  await Job.find({}).populate('company');
         console.log(jobs);
         return res.render('comp_home', {
             title:"Company home", 

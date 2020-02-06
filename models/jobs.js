@@ -17,7 +17,7 @@ const jobSchema = new mongoose.Schema({
     salary:{
         type:Number, 
         required: true
-    }
+    }, 
     
 }, {
         timestamps: true
