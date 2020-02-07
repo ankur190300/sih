@@ -42,5 +42,13 @@
   },
   "devDependencies": {
     "gulp": "^4.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vini7148/sih.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vini7148/sih/issues"
+  },
+  "homepage": "https://github.com/vini7148/sih#readme"
 }
